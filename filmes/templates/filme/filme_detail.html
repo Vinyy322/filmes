@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ object.titulo }}</h2>
+<p>Artista: {{ object.diretor }}</p>
+<p>lists de filmes:
+    {% for listfilmes in object.listfilmes_set.all %}
+        {{ listfilmes.nome }}
+    {% endfor %}
+</p>
+{% endblock  %}
